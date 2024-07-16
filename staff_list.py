@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
 
-from peewee import SqliteDatabase
 from tabulate import tabulate
 
-
-from config import DATABASE
 from models import Tutor
 
 
 if __name__ == '__main__':
-    db = SqliteDatabase(DATABASE)
-    db.connect()
 
     staff = (Tutor
              .select()

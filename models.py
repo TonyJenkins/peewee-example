@@ -3,13 +3,14 @@
 
 from peewee import *
 
-
 from config import DATABASE
+
+db = SqliteDatabase(DATABASE)
 
 
 class BaseModel(Model):
     class Meta:
-        database = SqliteDatabase(DATABASE)
+        database = db
 
 
 class Faculty(BaseModel):
