@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
+import peewee
 
-from peewee import SqliteDatabase
-
-
-from config import DATABASE
-from models import Tutor, Faculty, Room
+from models import db, Tutor, Faculty, Room
 
 global underwater_needlework, basket_weaving
 global turing101, turing102, turing103, turing104, turing105, turing106
@@ -85,10 +82,9 @@ def create_tutors():
 
 if __name__ == '__main__':
 
-    db = SqliteDatabase(DATABASE)
-
-    db.connect()
-
-    create_rooms()
-    create_faculties()
-    create_tutors()
+    try:
+        create_rooms()
+        create_faculties()
+        create_tutors()
+    except peewee.OperationalError:
+        print('Error populating database tables. Most likely the database does not exist, or tables are missing.')
