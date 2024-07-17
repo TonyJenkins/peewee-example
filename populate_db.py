@@ -3,7 +3,7 @@
 
 import peewee
 
-from models import db, Tutor, Faculty, Room
+from models import Tutor, Faculty, Room
 
 global underwater_needlework, basket_weaving
 global turing101, turing102, turing103, turing104, turing105, turing106
