@@ -4,7 +4,7 @@ Simple example of using:
 
 * SQLite (https://sqlite.org).
 * Peewee ORM (http://docs.peewee-orm.com and https://pypi.org/project/peewee/).
-* The ``template`` package from PyPi (https://pypi.org/project/template/).
+* The ``tabulate`` package from PyPi (https://pypi.org/project/tabulate/).
 
 See ``requirements.txt`` for the dependencies. These need to be installed before creating the database and running the scripts.
 
